@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rushika's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero-container">
+  <img src="pic1.png" alt="Rushika Profile" class="hero-image">
+  <div class="hero">
+    <p>Hello There, Howdy.. I'm </p>
+    <h1 class="slide-in">Rushika Reddy Pingili</h1>
+    <p class="fade-in">Aspiring Data Scientist | AI/ML Engineer </p>
+    <p>Check out my Profile below 👇</p>
+  </div>
+</div>
+
+<!-- Resume Download Section -->
+<section class="resume-download">
+  <h2>Download My Resume</h2>
+  <a href="Rushika Reddy Pingili_Resume.pdf" download>📄 Download Resume</a>
+</section>
+
+
+<!-- About Section -->
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    I’m Rushika Reddy Pingili, a passionate AI/ML engineer and Computer Science graduate (May 2025) from Northwest Missouri State University. Originally from India, I’m currently on OPT-EAD (F1 Visa, work authorized) and actively seeking roles in applied AI and machine learning.
+  </p>
+  <p>
+    I love building AI-powered applications that solve real-world problems — from predicting hospital readmissions to creating intelligent voice-based assistants.
+  </p>
+  <p>
+    Outside of code, you’ll find me immersed in anime, sketching in my doodle pad, or tuning into tech and psychology podcasts. I bring not just skill but curiosity, creativity, and a drive to keep learning — the same mindset I bring to every team and project.
+  </p>
+</section>
+
+
+
+<!-- Education Section -->
+<section class="education">
+  <h2>Education</h2>
+  <div class="edu-card">
+    <h3>Northwest Missouri State University</h3>
+    <p>Maryville | Missouri</p>
+    <p>Master's in Computer Science, May 2025</p>
+  </div>
+  <div class="edu-card">
+    <h3>Chaitanya Institute of Technology and Science</h3>
+    <p>Warangal | Telangana</p>
+    <p>Bachelor of Technology, 2023</p>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section class="projects">
+  <h2>Projects</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="carousel-track" id="carouselTrack">
+      <div class="card pink">
+        <h3>Hospital Readmission Prediction</h3>
+        <p>ML model predicting patient readmissions using Scikit-learn.</p>
+        <a href="https://github.com/rushikas569628/Hospital-ReAdmission-Prediction" target="_blank" class="card-link">View on GitHub</a>
+      </div>
+      <div class="card green">
+        <h3>RAISE</h3>
+        <p>Voice emotion analyzer using Whisper + Hugging Face Transformers.</p>
+         <a href="https://github.com/bandiajay/RAISE" target="_blank" class="card-link">View on GitHub</a>
+      </div>
+      <div class="card blue">
+        <h3>AskMyDocuBot</h3>
+        <p>Built with LangChain and OpenAI API for document summarization.</p>
+         <a href="https://github.com/rushikas569628/AskMyDocuBot" target="_blank" class="card-link">View on GitHub</a>
+      </div>
+      <div class="card red">
+        <h3>ChatBot</h3>
+        <p>Evaluates resumes against job descriptions using LLMs + FastAPI.</p>
+         <a href="https://github.com/rushikas569628/Chatbot" target="_blank" class="card-link">View on GitHub</a>
+      </div>
+    </div>
+    <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to connect with me via:</p>
+  <div class="links">
+    <a href="https://github.com/rushikas569628" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/rushika-pingili" target="_blank">LinkedIn</a>
+  </div>
+  <a href="mailto:rushika@example.com" class="btn">Say Hello 👋</a>
+</section>
+
+
+<script>
+  let currentIndex = 0;
+  const track = document.getElementById('carouselTrack');
+  const cardWidth = 320; // width + margin of card
+
+  function moveSlide(direction) {
+    const maxIndex = track.children.length - 1;
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex - 2) currentIndex = maxIndex - 2; // Adjust visible cards
+
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+</script>
+
+</body>
+</html>
